@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void) {
+  char nomes[3][50];
+  int notas[3][3];
+  for(int i=0;i<3;i++){
+    printf("Digite o nome do aluno %i: ",i+1);
+    fgets(nomes[i], 50, stdin);
+    printf("Digite as 3 notas do aluno %s: ",nomes[i]);
+    for(int j=0;j<3;j++){
+      scanf("%i",&notas[i][j]);
+    } while (getchar() != '\n');
+  }
+  return 0;
+}
